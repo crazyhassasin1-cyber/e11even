@@ -6,15 +6,11 @@
     <title>E11EVEN COURT - Basketball</title>
     <link rel="stylesheet" href="even.css">
     <style>
-        /* HIDDEN FULL STORY - shows when you click Read Full Story */
         .full-story { display:none; margin-top:16px; border-top:1px solid rgba(255,255,255,0.08); padding-top:16px; animation: fadeIn 0.3s; }
         .full-story.show { display:block; }
-        /* GREEN BUTTON */
         .btn-read { background:#ff7b00; color:#000; padding:8px 14px; border-radius:20px; font-weight:600; font-size:11px; border:none; cursor:pointer; margin-top:12px; display:inline-block; }
-        /* HIDDEN MATCH DETAIL */
         .match-detail { display:none; background:#1a1200; border:1px solid rgba(255,123,0,0.4); border-radius:12px; padding:14px; margin-top:-2px; animation: fadeIn 0.3s; }
         .match-detail.show { display:block; }
-        /* LIGHT TEXT - font-weight 400 normal */
         .match-detail h4, .full-story h4 { font-weight:400 !important; font-size:15px !important; font-family:Inter,sans-serif !important; letter-spacing:0.3px !important; }
         .match-detail p, .full-story p, .article-content p { font-weight:400 !important; }
         .section-title, .page-header h1 { font-weight:400 !important; }
@@ -22,9 +18,11 @@
     </style>
 </head>
 <body>
-    <!-- TOP NAV -->
+    <!-- TOP NAV - LOGO NOW CLICKABLE -->
     <nav class="navbar">
-        <div class="logo">E11<span>EVEN</span> <small>COURT</small></div>
+        <a href="index.html" style="text-decoration:none; color:inherit;">
+            <div class="logo">E11<span>EVEN</span> <small>COURT</small></div>
+        </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">HOME</a></li>
             <li><a href="pitch.html">PITCH</a></li>
@@ -34,10 +32,10 @@
         <div class="hamburger" id="hamburger">☰</div>
     </nav>
 
-    <!-- HEADER -->
-    <div class="page-header basketball-bg" style="padding:30px 20px; background:#1f1600;">
-        <h1 style="font-family:Inter,sans-serif; font-weight:400;">E11EVEN COURT</h1>
-        <p>Buckets. Blocks. Buzzer Beaters. - Results Oct 28, 2026</p>
+    <!-- HEADER - NOW BASKETBALL COURT IMAGE, NO BROWN -->
+    <div class="page-header basketball-bg" style="padding:60px 20px; background: linear-gradient(rgba(10,31,21,0.82), rgba(10,31,21,0.92)), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200'); background-size:cover; background-position:center; border-bottom:1px solid rgba(255,123,0,0.2);">
+        <h1 style="font-family:Inter,sans-serif; font-weight:400; position:relative; z-index:2;">E11EVEN COURT</h1>
+        <p style="position:relative; z-index:2;">Buckets. Blocks. Buzzer Beaters. - Results Oct 28, 2026</p>
     </div>
 
     <!-- STORY 1 - NBA BIG RESULT -->
@@ -83,38 +81,29 @@
             
             <div id="story2" class="full-story">
                 <h4 style="border-left:3px solid #e63900; padding-left:10px; color:#e63900;">Roundup Full Detail - All Games</h4>
-
                 <div style="margin-top:16px; border-left:2px solid #007a33; padding-left:12px;">
                     <p style="font-size:13px; font-weight:500; color:#007a33;">CELTICS 118-102 KNICKS - TD Garden</p>
                     <p style="font-size:12px; margin-top:6px; line-height:1.7;">Jayson Tatum with 32 pts, 8 reb, Jaylen Brown 26 pts. Celtics shot 18/38 from 3. Knicks: Jalen Brunson 29 pts but 6 turnovers. Karl-Anthony Towns struggled vs Porzingis - only 12 pts, 2/9 from 3.</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;"><strong style="font-weight:500;">Defense:</strong> Celtics held Knicks to 38% FG in second half. Mazzulla's switch defense locked Brunson late.</p>
+                    <p style="font-size:12px; margin-top:6px; line-height:1.7;"><strong style="font-weight:500;">Defense:</strong> Celtics held Knicks to 38% FG in second half.</p>
                 </div>
-
                 <div style="margin-top:16px; border-left:2px solid #007dc3; padding-left:12px;">
                     <p style="font-size:13px; font-weight:500; color:#007dc3;">THUNDER 115-109 NUGGETS - Paycom Center</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">MVP battle: SGA 35 pts, 7 ast vs Jokic 28 pts, 14 reb, 12 ast triple-double. Thunder's youth won it.</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">Chet Holmgren with 22 pts, 11 reb, 4 blocks - outplayed Jokic late. Jalen Williams clutch mid-range with 45 seconds left for 111-109 lead. Nuggets missed last 5 shots.</p>
+                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">MVP battle: SGA 35 pts, 7 ast vs Jokic 28 pts, 14 reb, 12 ast triple-double. Chet Holmgren 22 pts, 11 reb, 4 blocks.</p>
                 </div>
-
                 <div style="margin-top:16px; border-left:2px solid #00538c; padding-left:12px;">
                     <p style="font-size:13px; font-weight:500; color:#00538c;">MAVERICKS 112-98 SPURS - Rookie Flagg debut</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">No.1 pick Cooper Flagg shines in Dallas - 22 pts, 9 reb, 3 blocks in 31 mins. Kyrie Irving added 24 pts.</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">Spurs: Victor Wembanyama 26 pts, 12 reb, 5 blocks but 7 turnovers vs Flagg's defense. Chris Paul vs Kidd coaching battle - Kidd wins.</p>
+                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">No.1 pick Cooper Flagg shines - 22 pts, 9 reb, 3 blocks. Kyrie 24 pts. Wembanyama 26 pts, 12 reb, 5 blocks.</p>
                     <p style="font-size:12px; margin-top:6px; line-height:1.7;"><strong style="font-weight:500;">Highlight:</strong> Flagg dunk over Wemby in Q3 went viral.</p>
                 </div>
-
                 <div style="margin-top:16px; border-left:2px solid #00471b; padding-left:12px;">
                     <p style="font-size:13px; font-weight:500; color:#00471b;">BUCKS 121-115 HEAT - Fiserv Forum</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">Giannis 34 pts, 16 reb, 6 ast, Damian Lillard 28 pts with 6 threes. Bucks come back from 15 down in Q2.</p>
-                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">Heat: Jimmy Butler 23 pts, Bam Adebayo 19 pts, 12 reb. Tyler Herro missed potential tying 3 with 18 seconds. Doc Rivers gets 2nd win of season.</p>
+                    <p style="font-size:12px; margin-top:6px; line-height:1.7;">Giannis 34 pts, 16 reb, 6 ast, Lillard 28 pts with 6 threes. Bucks come back from 15 down.</p>
                 </div>
             </div>
 
-            <!-- UPCOMING -->
             <div style="margin-top:22px; border-top:1px solid rgba(255,255,255,0.08); padding-top:16px;">
                 <h3 style="font-family:Inter,sans-serif; font-size:14px; font-weight:400; margin-bottom:12px; border-left:4px solid #ff7b00; padding-left:8px;">UPCOMING - NEXT 48HRS - TAP FOR DETAIL</h3>
                 <div style="display:grid; gap:12px;">
-                    
                     <div class="match-card" onclick="toggleMatch('match1')" style="cursor:pointer;">
                         <div><span style="font-size:9px; color:#ff7b00; font-weight:600;">NBA - TODAY 19:30 ET</span>
                             <div style="font-weight:500; font-size:13px; margin-top:4px; font-family:Inter,sans-serif;">Cavaliers vs 76ers</div><span style="font-size:10px; opacity:0.6;">Rocket Arena - Tap for detail →</span></div>
@@ -122,33 +111,27 @@
                     <div id="match1" class="match-detail">
                         <h4 style="color:#ff7b00; border-left:3px solid #ff7b00; padding-left:10px;">Cavaliers vs 76ers - Match Detail</h4>
                         <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Tipoff:</strong> Tonight 19:30 ET - Cleveland</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Team News:</strong> Cavs: Donovan Mitchell, Evan Mobley, Darius Garland all fit. 76ers: Embiid game-time decision (knee), Maxey and Paul George start.</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Form:</strong> Cavs 2-0, best defense in East. Sixers 1-2 after Embiid missed 2 games.</p>
+                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Team News:</strong> Cavs: Mitchell, Mobley, Garland fit. 76ers: Embiid game-time decision, Maxey and Paul George start.</p>
                         <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Prediction:</strong> Cavaliers 112-104 76ers</p>
                     </div>
-
                     <div class="match-card" onclick="toggleMatch('match2')" style="cursor:pointer;">
                         <div><span style="font-size:9px; color:#e63900; font-weight:600;">NBA - TODAY 20:00 ET</span><div style="font-weight:500; font-size:13px; margin-top:4px; font-family:Inter,sans-serif;">Knicks vs Bulls</div><span style="font-size:10px; opacity:0.6;">Madison Square Garden - Tap for detail →</span></div>
                     </div>
                     <div id="match2" class="match-detail" style="background:#120a00; border-color:#ff4d00;">
                         <h4 style="color:#ff9f1c; border-left:3px solid #ff4d00; padding-left:10px;">Knicks vs Bulls - Match Detail</h4>
                         <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Tipoff:</strong> 20:00 ET - MSG</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Team News:</strong> Knicks: Brunson, Bridges, Anunoby, KAT all start - need bounce back after Celtics loss. Bulls: Zach LaVine, DeRozan returns to MSG, Vucevic vs Towns battle.</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Stakes:</strong> Knicks 0-2 at home start - Thibodeau under pressure.</p>
+                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Team News:</strong> Knicks: Brunson, Bridges, Anunoby, KAT all start. Bulls: LaVine, DeRozan returns.</p>
                         <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Prediction:</strong> Knicks 115-108 Bulls</p>
                     </div>
-
                     <div class="match-card" onclick="toggleMatch('match3')" style="cursor:pointer;">
                         <div><span style="font-size:9px; color:#ccc; font-weight:600;">NBA CUP - OCT 30</span><div style="font-weight:500; font-size:13px; margin-top:4px; font-family:Inter,sans-serif;">Warriors vs Thunder</div><span style="font-size:10px; opacity:0.6;">Chase Center - 21:00 ET - Tap for detail →</span></div>
                     </div>
                     <div id="match3" class="match-detail" style="background:#0a0a1a; border-color:#ffc800;">
                         <h4 style="color:#ffc800; border-left:3px solid #ffc800; padding-left:10px;">WARRIORS VS THUNDER - NBA CUP DETAIL</h4>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Tipoff:</strong> Oct 30, 21:00 ET - Chase Center - Emirates NBA Cup Group Play</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Form:</strong> Warriors lost to Lakers last night. Thunder beat Nuggets - SGA MVP form.</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Team News:</strong> Warriors: Curry, Green, Kuminga expected. Thunder: SGA, Holmgren, Jalen Williams - best young core.</p>
-                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Prize:</strong> Winner gets advantage in NBA Cup Group C - Vegas final in December.</p>
+                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Tipoff:</strong> Oct 30, 21:00 ET - Chase Center - NBA Cup</p>
+                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Form:</strong> Warriors lost to Lakers, Thunder beat Nuggets.</p>
+                        <p style="font-size:12px; margin-top:8px; line-height:1.7;"><strong style="font-weight:500;">Prize:</strong> Winner gets advantage in Group C - Vegas final.</p>
                     </div>
-
                 </div>
             </div>
         </div>
