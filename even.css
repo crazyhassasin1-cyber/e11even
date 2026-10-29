@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter', sans-serif; background:#0a0a0a; color:#fff; line-height:1.6; }
+
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 5%; background:#111; position:sticky; top:0; z-index:100; border-bottom:1px solid #222; }
+.logo { font-family:'Anton'; font-size:32px; letter-spacing:2px; } 
+.logo span { color:#00ff88; } 
+.logo small{ font-size:12px; color:#aaa; letter-spacing:1px;}
+.nav-links { display:flex; list-style:none; gap:25px; }
+.nav-links a { color:#fff; text-decoration:none; font-weight:700; font-size:14px; transition:0.2s; }
+.nav-links a.active, .nav-links a:hover { color:#00ff88; }
+.hamburger { display:none; font-size:26px; cursor:pointer; }
+
+.hero { height:85vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574629810360-214f3774381b'); background-size:cover; background-position:center; }
+.hero h1 { font-family:'Anton'; font-size:70px; }
+.hero p { margin:10px 0 20px; color:#ccc; font-size:18px; }
+.btn { padding:12px 25px; margin:10px; text-decoration:none; font-weight:700; border-radius:30px; display:inline-block; transition:0.3s; }
+.btn-football { background:#00ff88; color:#000; } 
+.btn-football:hover { transform:scale(1.05); }
+.btn-basketball { border:2px solid #ff4500; color:#fff; }
+.btn-basketball:hover { background:#ff4500; }
+
+.categories { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:50px 5%; }
+.card { height:250px; padding:20px; border-radius:15px; display:flex; flex-direction:column; justify-content:flex-end; cursor:pointer; transition:0.3s; }
+.card:hover { transform:translateY(-10px); }
+.card.football { background:#00ff88; color:#000; } 
+.card.basketball { background:#ff4500; } 
+.card.tennis { background:#fff; color:#000; }
+
+.section-title { padding:0 5%; margin-top:20px; font-family:'Anton'; font-size:30px; border-left:5px solid #00ff88; margin-left:5%; }
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; padding:20px 5% 50px; }
+.post { background:#1a1a1a; padding:20px; border-radius:12px; border-left:4px solid #00ff88; }
+.post span { font-size:12px; color:#888; margin-top:10px; display:block; }
+
+/* NEWS SECTION */
+.news-section { padding:20px 0; }
+.article-content { max-width:850px; margin:30px auto; padding:35px; background:#151515; border-radius:15px; border:1px solid #222; }
+.article-content .lead { font-size:19px; font-weight:700; color:#eee; margin-bottom:20px; }
+.article-content h2 { font-family:'Anton'; margin:30px 0 15px; font-size:26px; color:#00ff88; }
+.article-content p { color:#bbb; margin-bottom:15px; font-size:15.5px; line-height:1.8; }
+blockquote { border-left:4px solid #00ff88; padding:15px 20px; background:#1a1a1a; margin:20px 0; font-style:italic; color:#fff; border-radius:0 10px 10px 0; }
+.other-news { display:grid; gap:15px; margin:20px 0; }
+.other-card { background:#1e1e1e; padding:18px; border-radius:10px; border:1px solid #2a2a2a; }
+.other-card h3 { font-size:16px; margin-bottom:5px; color:#fff; }
+.other-card p { font-size:14px; margin:0; color:#aaa; }
+.btn-read { display:inline-block; margin-top:30px; background:#00ff88; color:#000; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:700; }
+
+/* --- ALWAYS BORDER FOR ARTICLE PICS - YOUR REQUEST --- */
+.article-content img,
+.main-img,
+.news-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border: 3px solid #00ff88;
+    border-radius: 12px;
+    padding: 4px;
+    background: #000;
+    margin: 20px 0 10px 0;
+    display: block;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
+}
+.article-content figure { margin: 25px 0; }
+.article-content figcaption { font-size: 12px; color: #888; text-align: center; margin-top: 8px; font-style: italic; letter-spacing: 0.5px; }
+
+.page-header { height:40vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.football-bg { background:#00ff88; color:#000; } .basketball-bg { background:#ff4500; } .tennis-bg { background:#fff; color:#000; }
+.page-header h1 { font-family:'Anton'; font-size:60px; }
+
+footer { text-align:center; padding:25px; background:#111; color:#666; border-top:1px solid #222; margin-top:40px; }
+
+@media(max-width:768px){
+  .nav-links { position:absolute; top:60px; left:0; width:100%; background:#111; flex-direction:column; padding:20px; display:none; }
+  .nav-links.show { display:flex; }
+  .hamburger { display:block; }
+  .hero h1 { font-size:40px; } 
+  .categories { grid-template-columns:1fr; }
+  .article-content { margin:15px; padding:20px; }
+}

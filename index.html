@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E11EVEN - Home of Football, Basketball & Tennis</title>
+    <link rel="stylesheet" href="even.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">E11<span>EVEN</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="pitch.html">E11EVEN PITCH</a></li>
+                <li><a href="court.html">E11EVEN COURT</a></li>
+                <li><a href="tennis.html">E11EVEN TENNIS</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+        <div class="hero">
+            <h1>WHERE LEGENDS ARE MADE</h1>
+            <p>Football. Basketball. Tennis. One Platform.</p>
+            <div class="hero-btns">
+                <a href="pitch.html" class="btn btn-football">Enter The Pitch</a>
+                <a href="court.html" class="btn btn-basketball">Enter The Court</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="categories">
+        <div class="card football" onclick="window.location.href='pitch.html'">
+            <h2>E11EVEN PITCH</h2>
+            <p>Live scores, Transfers & Tactics</p>
+        </div>
+        <div class="card basketball" onclick="window.location.href='court.html'">
+            <h2>E11EVEN COURT</h2>
+            <p>NBA, Streetball & Highlights</p>
+        </div>
+        <div class="card tennis" onclick="window.location.href='tennis.html'">
+            <h2>E11EVEN TENNIS</h2>
+            <p>Grand Slams & Rankings</p>
+        </div>
+    </section>
+
+    <section class="latest">
+        <h2 class="section-title">Latest Drops</h2>
+        <div class="blog-grid" id="blogGrid">
+            <!-- JS will load posts here -->
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2 class="section-title">BREAKING TODAY - Oct 28</h2>
+        <div class="article-content">
+            <span style="background:#ff0033; color:#fff; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;">BREAKING NEWS</span>
+            <h2 style="color:#fff; margin-top:15px;">FLEETWOOD STUNS ARSENAL</h2>
+            <p class="lead">In one of the biggest upsets in English football history, fourth-tier Fleetwood Town dumped Premier League champions Arsenal out of the Carabao Cup 5-3 on penalties after a 1-1 draw.</p>
+
+            <h2>The Night Everything Went Wrong</h2>
+            <p>Aaron Loupalo-Bi gave Fleetwood the lead in the first half at Highbury Stadium. Mikel Arteta made nine changes to his side, and the gamble failed. Arsenal struggled badly in the first half.</p>
+            
+            <p>Captain Martin Odegaard came on in the second half to rescue the game. Viktor Gyokeres equalized after the break, but Arsenal missed several clear chances. To make it worse, 16-year-old wonderkid Max Dowman was sent off with 5 minutes left.</p>
+
+            <blockquote>"It's very frustrating to go out. The way we've played was not on the level. We need to do much, much better." - Martin Odegaard</blockquote>
+
+            <p>In the shootout, Fleetwood keeper Jay Lynch saved Bruno Guimaraes' penalty. Teenager Conor Haughey scored the winning penalty, sending the home crowd wild. 84 places separate these two clubs in the pyramid.</p>
+            <figure>
+    <img src="images/arsenal-fleetwood.jpg" alt="Arsenal vs Fleetwood" class="news-img">
+    <figcaption>Fleetwood players celebrate after knocking out Arsenal - Oct 28, 2026</figcaption>
+</figure>
+<figure>
+    <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9" alt="Football stadium" class="main-img">
+    <figcaption>Highbury Stadium - Where Fleetwood made history</figcaption>
+</figure>
+
+            <h2>Other Football News Today</h2>
+            
+            <div class="other-news">
+                <div class="other-card">
+                    <h3>🇪🇸 Spain: Copa del Rey Suspended</h3>
+                    <p>The Spanish FA suspended all 24 Copa del Rey matches today following a tragic railway accident in Toledo. Matches will be rescheduled.</p>
+                </div>
+                <div class="other-card">
+                    <h3>🌍 CAF Champions League Draw</h3>
+                    <p>Group C is the group of death: RS Berkane, Simba SC, Orlando Pirates, and Colombe Sportive. Draw held in Cairo today.</p>
+                </div>
+                <div class="other-card">
+                    <h3>🇳🇬 Nigeria U-15 Through</h3>
+                    <p>Nigeria Future Eagles beat New Caledonia 7-0 to reach Round of 16. They face Benin next.</p>
+                </div>
+            </div>
+
+            <h2>What Next for Arsenal?</h2>
+            <p>Arsenal must bounce back quickly. They are still top of the Premier League, but this loss hurts. Arteta said he will review his squad rotation. For Fleetwood, this is history. A night they will never forget.</p>
+
+            <a href="pitch.html" class="btn-read">← Back to E11EVEN Pitch</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 E11EVEN. All rights reserved.</p></footer>
+
+    <script>
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Latest Drops
+        const posts = [
+            { title: "EPL Matchday 11 Review", cat: "PITCH" },
+            { title: "LeBron's Final Season?", cat: "COURT" },
+            { title: "Alcaraz vs Sinner Rivalry", cat: "TENNIS" }
+        ];
+        const grid = document.getElementById('blogGrid');
+        posts.forEach(p => {
+            grid.innerHTML += `<article class="other-card"><h3>${p.title}</h3><p>Read full story on ${p.cat}</p><a href="pitch.html" style="color:#00ff88; font-size:13px;">Read More →</a></article>`;
+        });
+    </script>
+</body>
+</html>

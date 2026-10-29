@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: #d9d9d9; /* light gray background like image */
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+
+.camera {
+  font-size: 26px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hero-bg {
+  background: #5a5a5a; /* dark gray box */
+  border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  height: 400px;
+}
+
+.img-col {
+  width: 120px;
+  height: 320px;
+  border-radius: 60px; /* makes the pill shape */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* dark overlay like image */
+}
+
+/* BIG TEXT OVERLAY */
+.hero-text {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 120px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 10px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-text span {
+  -webkit-text-stroke: 2px white; /* white outline */
+  color: transparent; /* makes it outlined text */
+}
+
+.hero-text .e-break {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .hero-bg {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .img-col {
+    width: 45%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .hero-text {
+    font-size: 60px;
+  }
+}
