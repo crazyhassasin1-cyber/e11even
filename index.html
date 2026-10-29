@@ -12,88 +12,101 @@
             <div class="logo">E11<span>EVEN</span></div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">HOME</a></li>
-                <li><a href="pitch.html">E11EVEN PITCH</a></li>
-                <li><a href="court.html">E11EVEN COURT</a></li>
-                <li><a href="tennis.html">E11EVEN TENNIS</a></li>
+                <li><a href="pitch.html">PITCH</a></li>
+                <li><a href="court.html">COURT</a></li>
+                <li><a href="tennis.html">TENNIS</a></li>
             </ul>
             <div class="hamburger" id="hamburger">☰</div>
         </nav>
         <div class="hero">
-            <h1>WHERE LEGENDS ARE MADE</h1>
-            <p>Football. Basketball. Tennis. One Platform.</p>
-            <div class="hero-btns">
-                <a href="pitch.html" class="btn btn-football">Enter The Pitch</a>
-                <a href="court.html" class="btn btn-basketball">Enter The Court</a>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="eyebrow">THE HOME OF SPORT</span>
+                <h1>EVERY GAME.<br><span>EVERY MOMENT.</span></h1>
+                <p>Football. Basketball. Tennis. One platform.</p>
+                <div class="hero-btns">
+                    <a href="pitch.html" class="btn btn-football">Explore Football</a>
+                    <a href="court.html" class="btn btn-basketball">Explore Sports</a>
+                </div>
             </div>
         </div>
     </header>
 
+    <section class="match-centre-section">
+      <div class="section-head">
+        <h2>Match Centre</h2>
+        <a href="pitch.html">ALL SCORES →</a>
+      </div>
+      <div class="match-card">
+        <div class="match-top"><span>FOOTBALL - MATCH CENTRE</span><span class="live">● LIVE</span></div>
+        <div class="score-row">
+          <div class="team"><div class="team-icon">ARS</div>ARSENAL</div>
+          <div class="score">2 — 1</div>
+          <div class="team"><div class="team-icon">FLE</div>FLEETWOOD</div>
+        </div>
+        <p class="score-note">Illustrative design - Replace with verified live match data</p>
+      </div>
+    </section>
+
+    <div class="section-head" style="padding:0 20px;"><h2>Choose Your Game</h2></div>
     <section class="categories">
         <div class="card football" onclick="window.location.href='pitch.html'">
-            <h2>E11EVEN PITCH</h2>
+            <h2>E11EVEN PITCH ⚽</h2>
             <p>Live scores, Transfers & Tactics</p>
         </div>
         <div class="card basketball" onclick="window.location.href='court.html'">
-            <h2>E11EVEN COURT</h2>
+            <h2>E11EVEN COURT 🏀</h2>
             <p>NBA, Streetball & Highlights</p>
         </div>
         <div class="card tennis" onclick="window.location.href='tennis.html'">
-            <h2>E11EVEN TENNIS</h2>
+            <h2>E11EVEN TENNIS 🎾</h2>
             <p>Grand Slams & Rankings</p>
         </div>
     </section>
 
+    <div class="section-head" style="padding:10px 20px 0;"><h2>The Latest</h2></div>
     <section class="latest">
-        <h2 class="section-title">Latest Drops</h2>
-        <div class="blog-grid" id="blogGrid">
-            <!-- JS will load posts here -->
+        <div class="blog-grid" id="blogGrid"></div>
+    </section>
+
+    <!-- MBAPPE TRENDING STORY - BORDER FITS IMAGE -->
+    <section class="news-section">
+        <h2 class="section-title">TRENDING TODAY - Oct 28</h2>
+        <div class="article-content">
+            <span style="background:#ff4d4d; color:#fff; padding:4px 10px; border-radius:12px; font-size:9px; font-weight:800;">TRENDING 🔥</span>
+            <h2 style="margin-top:12px;">Mbappe Faces China Backlash Over Mao Remark</h2>
+            <p class="lead">Kylian Mbappe apologises after calling Mao Zedong "some guy - Chinese dictator" in viral meme interview. Chinese brands cut ties, La Liga broadcast suspended.</p>
+
+            <figure>
+                <img src="images/mbappe.webp" alt="Kylian Mbappe" class="news-img">
+                <figcaption>Mbappe's Mao comment triggered swift backlash - Image: Unsplash</figcaption>
+            </figure>
+
+            <p>Real Madrid forward Kylian Mbappe's rapid fall from favour in China followed a familiar pattern: online outrage, corporate distancing and platform restrictions.</p>
+            <p>Within 24 hours of a podcast clip where he said <em>"some guy - I think he's a Chinese dictator"</em> about a Mao Zedong meme, sponsors Mengniu Dairy, Shanghai Milkground and Eastroc ended cooperation.</p>
+            
+            <blockquote>"My comment was ill-judged, and I now understand that it hurt many people in China. I apologize to everyone my words have upset." - Mbappe Statement, Tuesday</blockquote>
+            
+            <p>China Media Group (CMG) suspended all La Liga broadcasts. La Liga president Javier Tebas met China's ambassador saying: "China is and will continue to be a strategic partner for La Liga."</p>
+            <a href="pitch.html" class="btn-read">Follow Live Updates →</a>
         </div>
     </section>
 
+    <!-- ARSENAL STORY - BORDER FITS IMAGE -->
     <section class="news-section">
         <h2 class="section-title">BREAKING TODAY - Oct 28</h2>
         <div class="article-content">
-            <span style="background:#ff0033; color:#fff; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;">BREAKING NEWS</span>
-            <h2 style="color:#fff; margin-top:15px;">FLEETWOOD STUNS ARSENAL</h2>
+            <span style="background:#00ff88; color:#000; padding:4px 10px; border-radius:12px; font-size:9px; font-weight:800;">BREAKING</span>
+            <h2 style="margin-top:12px;">FLEETWOOD STUNS ARSENAL</h2>
             <p class="lead">In one of the biggest upsets in English football history, fourth-tier Fleetwood Town dumped Premier League champions Arsenal out of the Carabao Cup 5-3 on penalties after a 1-1 draw.</p>
 
-            <h2>The Night Everything Went Wrong</h2>
-            <p>Aaron Loupalo-Bi gave Fleetwood the lead in the first half at Highbury Stadium. Mikel Arteta made nine changes to his side, and the gamble failed. Arsenal struggled badly in the first half.</p>
-            
-            <p>Captain Martin Odegaard came on in the second half to rescue the game. Viktor Gyokeres equalized after the break, but Arsenal missed several clear chances. To make it worse, 16-year-old wonderkid Max Dowman was sent off with 5 minutes left.</p>
+            <figure>
+                <img src="images/arsenal-fleetwood.jpg" onerror="this.src='https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=900'" alt="Arsenal vs Fleetwood" class="news-img">
+                <figcaption>Fleetwood Town stun Arsenal at Highbury Stadium</figcaption>
+            </figure>
 
             <blockquote>"It's very frustrating to go out. The way we've played was not on the level. We need to do much, much better." - Martin Odegaard</blockquote>
-
-            <p>In the shootout, Fleetwood keeper Jay Lynch saved Bruno Guimaraes' penalty. Teenager Conor Haughey scored the winning penalty, sending the home crowd wild. 84 places separate these two clubs in the pyramid.</p>
-            <figure>
-    <img src="images/arsenal-fleetwood.jpg" alt="Arsenal vs Fleetwood" class="news-img">
-    <figcaption>Fleetwood players celebrate after knocking out Arsenal - Oct 28, 2026</figcaption>
-</figure>
-<figure>
-    <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9" alt="Football stadium" class="main-img">
-    <figcaption>Highbury Stadium - Where Fleetwood made history</figcaption>
-</figure>
-
-            <h2>Other Football News Today</h2>
-            
-            <div class="other-news">
-                <div class="other-card">
-                    <h3>🇪🇸 Spain: Copa del Rey Suspended</h3>
-                    <p>The Spanish FA suspended all 24 Copa del Rey matches today following a tragic railway accident in Toledo. Matches will be rescheduled.</p>
-                </div>
-                <div class="other-card">
-                    <h3>🌍 CAF Champions League Draw</h3>
-                    <p>Group C is the group of death: RS Berkane, Simba SC, Orlando Pirates, and Colombe Sportive. Draw held in Cairo today.</p>
-                </div>
-                <div class="other-card">
-                    <h3>🇳🇬 Nigeria U-15 Through</h3>
-                    <p>Nigeria Future Eagles beat New Caledonia 7-0 to reach Round of 16. They face Benin next.</p>
-                </div>
-            </div>
-
-            <h2>What Next for Arsenal?</h2>
-            <p>Arsenal must bounce back quickly. They are still top of the Premier League, but this loss hurts. Arteta said he will review his squad rotation. For Fleetwood, this is history. A night they will never forget.</p>
-
+            <p>In the shootout, Fleetwood keeper Jay Lynch saved a penalty. Teenager Conor Haughey scored the winning penalty, sending the home crowd wild. 84 places separate these two clubs.</p>
             <a href="pitch.html" class="btn-read">← Back to E11EVEN Pitch</a>
         </div>
     </section>
@@ -101,14 +114,9 @@
     <footer><p>&copy; 2026 E11EVEN. All rights reserved.</p></footer>
 
     <script>
-        // Mobile menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-
-        // Latest Drops
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('show'));
         const posts = [
             { title: "EPL Matchday 11 Review", cat: "PITCH" },
             { title: "LeBron's Final Season?", cat: "COURT" },
@@ -116,7 +124,7 @@
         ];
         const grid = document.getElementById('blogGrid');
         posts.forEach(p => {
-            grid.innerHTML += `<article class="other-card"><h3>${p.title}</h3><p>Read full story on ${p.cat}</p><a href="pitch.html" style="color:#00ff88; font-size:13px;">Read More →</a></article>`;
+            grid.innerHTML += `<article class="other-card"><h3>${p.title}</h3><p>Read full story on ${p.cat}</p><a href="pitch.html" style="color:#00ff88; font-size:10px; text-decoration:none; font-weight:700;">Read More →</a></article>`;
         });
     </script>
 </body>
