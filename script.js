@@ -8,35 +8,41 @@ if(hamburger){
 }
 
 // === YOUR EDITABLE NEWS SOURCE ===
-// Edit this array only - everything else auto-updates
 const footballNews = [
   {
     id: 1,
+    title: "BREAKING: Grealish Axed Over Discipline Breach",
+    cat: "PITCH",
+    link: "pitch.html#grealish",
+    lead: "David Moyes confirms Grealish dropped for Everton's 3-1 Carabao Cup win over Newcastle"
+  },
+  {
+    id: 2,
     title: "Liverpool 1-1 Chelsea [6-5 Pens]",
     cat: "PITCH",
     link: "pitch.html",
     lead: "Reds knock out Chelsea on penalties at Anfield"
   },
   {
-    id: 2,
+    id: 3,
     title: "Man City 2-2 Brighton [4-3 Pens]",
     cat: "PITCH",
     link: "pitch.html",
     lead: "City through after shootout thriller"
   },
   {
-    id: 3,
-    title: "Arsenal vs Aston Villa Tonight 19:45",
+    id: 4,
+    title: "Bournemouth 3-0 Aston Villa",
     cat: "PITCH",
     link: "pitch.html",
-    lead: "Preview - Emirates showdown"
+    lead: "Statement win for Iraola at Vitality"
   }
 ];
 
-// Dynamic posts for homepage - NOW AUTO FROM footballNews
+// Homepage auto posts from footballNews
 const grid = document.getElementById('blogGrid');
 if(grid){
-    grid.innerHTML = ""; // clear old
+    grid.innerHTML = "";
     footballNews.forEach(p => {
         grid.innerHTML += `
         <article class="post" onclick="window.location.href='${p.link}'" style="cursor:pointer;">
@@ -45,8 +51,6 @@ if(grid){
           <span style="color:#00ff88; font-size:11px; font-weight:700;">${p.cat} - Read More →</span>
         </article>`;
     });
-    
-    // Keep your other categories too
     grid.innerHTML += `
       <article class="post" onclick="window.location.href='court.html'" style="cursor:pointer;">
         <h3>LeBron's Final Season?</h3><p>NBA update</p><span style="color:#00ff88; font-size:11px;">COURT →</span>
@@ -57,43 +61,28 @@ if(grid){
     `;
 }
 
-// For pitch.html full story page
-const newsContainer = document.getElementById('newsContainer');
-if(newsContainer && typeof fullFootballStories !== 'undefined'){
-    fullFootballStories.forEach(n => {
-        newsContainer.innerHTML += `
-        <section class="news-section">
-            <div class="article-content" onclick="openStory(${n.id})" style="cursor:pointer;">
-                <span style="background:${n.badgeColor}; color:#000; padding:4px 10px; border-radius:12px; font-size:9px; font-weight:800;">${n.badge}</span>
-                <h2 style="margin-top:12px; font-family:Impact,sans-serif;">${n.title}</h2>
-                <p class="lead">${n.lead}</p>
-                <figure><img src="${n.image}" class="news-img"><figcaption>${n.caption}</figcaption></figure>
-                <span style="color:#00ff88; font-size:11px; font-weight:700;">Tap to read full story →</span>
-            </div>
-        </section>`;
-    });
-}
-
-function openStory(id){
-  const box = document.getElementById('fullStoryBox');
-  const content = document.getElementById('fullStoryContent');
-  if(!box || !content) return;
-  const n = fullFootballStories.find(x => x.id === id);
-  content.innerHTML = `<h1 style="font-family:Impact,sans-serif;">${n.title}</h1><p>${n.fullStory}</p>`;
-  box.style.display = 'block';
-}
-function closeStory(){
-  document.getElementById('fullStoryBox').style.display = 'none';
-}
-
-console.log("E11EVEN Loaded Successfully - Update footballNews array to change news");function toggleMatch(id){
+// Toggle functions for pitch.html
+function toggleStory(id, btn){
     const el = document.getElementById(id);
-    // close others
-    document.querySelectorAll('.full-story').forEach(e => { if(e.id !== id && e.id.startsWith('match')) e.style.display='none'; });
-    if(el.style.display === 'none' || el.style.display === ''){
-        el.style.display = 'block';
-        el.scrollIntoView({behavior:'smooth', block:'center'});
+    if(!el) return;
+    el.classList.toggle('show');
+    const isOpen = el.classList.contains('show');
+    if(id === 'grealishStory'){
+        btn.textContent = isOpen ? 'Hide Updates ↑' : 'Follow Live Updates →';
     } else {
-        el.style.display = 'none';
+        btn.textContent = isOpen ? 'Hide Full Story ↑' : 'Read Full Story ↓';
     }
+    if(isOpen) el.scrollIntoView({behavior:'smooth', block:'start'});
 }
+
+function toggleMatch(id){
+    const el = document.getElementById(id);
+    if(!el) return;
+    document.querySelectorAll('.match-detail').forEach(m => { 
+        if(m.id !== id) m.classList.remove('show'); 
+    });
+    el.classList.toggle('show');
+    if(el.classList.contains('show')) el.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+console.log("E11EVEN Loaded - Grealish story integrated");

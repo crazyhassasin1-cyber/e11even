@@ -2,7 +2,6 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html, body { overflow-x:hidden; width:100%; }
 body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-height:1.6; }
-
 .navbar { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#08140f; position:sticky; top:0; z-index:100; border-bottom:1px solid rgba(255,255,255,0.06); }
 .logo { font-family:'Anton'; font-size:26px; letter-spacing:1.5px; } 
 .logo span { color:#00ff88; } 
@@ -10,7 +9,6 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
 .nav-links a { color:#fff; text-decoration:none; font-weight:700; font-size:12px; opacity:0.7; transition:0.2s; }
 .nav-links a.active, .nav-links a:hover { color:#00ff88; opacity:1; }
 .hamburger { display:none; font-size:26px; cursor:pointer; }
-
 .hero { position:relative; height:62vh; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-start; text-align:left; background: url('https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=1200') center/cover no-repeat; border-radius:0 0 22px 22px; overflow:hidden; }
 .hero::after { content:''; position:absolute; inset:0; background: linear-gradient(to top, #08140f 10%, rgba(8,20,15,0.2) 70%); }
 .hero h1 { position:relative; z-index:2; font-family:'Anton'; font-size:38px; line-height:0.95; margin-left:20px; text-transform:uppercase; }
@@ -20,7 +18,6 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
 .btn-football { background:#c6ff00; color:#000; } 
 .btn-basketball { border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.12); color:#fff; }
 .hero::before { content:'THE HOME OF SPORT'; position:absolute; bottom:135px; left:20px; z-index:2; color:#7aff7a; font-size:10px; font-weight:800; letter-spacing:1.5px; }
-
 .match-centre-section { padding:20px; }
 .section-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
 .section-head h2 { font-size:14px; font-weight:800; }
@@ -33,7 +30,6 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
 .team-icon { width:34px; height:34px; background:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#000; font-weight:900; font-size:10px; }
 .score { font-size:22px; font-weight:900; font-family:'Anton'; }
 .score-note { font-size:8px; opacity:0.4; text-align:center; margin-top:8px; }
-
 .categories { display:grid; grid-template-columns:1fr; gap:0; padding:0 20px; }
 .categories .card { padding:16px; border-radius:14px; cursor:pointer; margin-bottom:12px; border:1px solid rgba(255,255,255,0.06); }
 .categories .card h2 { font-size:13px; font-weight:800; }
@@ -41,11 +37,9 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
 .card.football { background:#d9f0e6; color:#000; border-color:#00ff88; } 
 .card.basketball { background:#ff9f1c; color:#000; } 
 .card.tennis { background:#efefef; color:#000; }
-
 .latest { padding:0 20px; width:100%; box-sizing:border-box; }
 .blog-grid { display:grid; grid-template-columns:1fr; gap:12px; width:100%; }
 .post, .other-card { background:#14261d; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.06); width:100%; box-sizing:border-box; }
-
 .latest img, .latest .latest-main-img {
   width:100% !important;
   max-width:100% !important;
@@ -58,11 +52,8 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
   display:block !important;
   box-sizing:border-box !important;
 }
-
 .news-section { padding:20px; width:100%; box-sizing:border-box; }
 .article-content { max-width:100%; margin:20px 0; padding:16px; background:#14261d; border-radius:14px; border:1px solid rgba(255,255,255,0.06); box-sizing:border-box; }
-
-/* --- ARSENAL IMAGE FOCUS - BORDER FITS --- */
 .article-content figure {
   width:100% !important;
   max-width:100% !important;
@@ -75,8 +66,6 @@ body { font-family:'Inter', sans-serif; background:#08140f; color:#fff; line-hei
   box-sizing:border-box !important;
   box-shadow:0 0 25px rgba(0,255,136,0.25) !important;
 }
-
-/* THIS IS THE ARSENAL IMAGE */
 .article-content figure img,
 .news-img,
 img[src*="arsenal"] {
@@ -92,11 +81,40 @@ img[src*="arsenal"] {
   object-fit:cover !important;
   object-position:center top !important;
 }
-
 .article-content figcaption { font-size:10px; color:#888; text-align:center; margin-top:8px; font-style:italic; }
+.section-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #c8d5d0 !important;
+  background: #14261d;
+  display: inline-block;
+  padding: 6px 12px 6px 10px;
+  border-left: 3px solid #00ff88 !important;
+  border-radius: 0 6px 6px 0;
+  letter-spacing: 0.8px;
+  opacity: 1 !important;
+  text-transform: uppercase;
+  margin: 15px 0 8px 0;
+}footer { text-align:center; padding:20px; background:#08140f; color:#666; border-top:1px solid rgba(255,255,255,0.06); margin-top:20px; font-size:10px; }
 
-.section-title { padding:0; margin-top:10px; font-family:'Anton'; font-size:16px; border-left:4px solid #00ff88; padding-left:10px; }
-footer { text-align:center; padding:20px; background:#08140f; color:#666; border-top:1px solid rgba(255,255,255,0.06); margin-top:20px; font-size:10px; }
+/* FIX BLUE LINK */
+a.btn-read, .btn-read {
+  color: #000 !important;
+  background: #00ff88 !important;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  margin-top: 12px;
+  border: none;
+}
+a.btn-read:visited, a.btn-read:hover, a.btn-read:active {
+  color: #000 !important;
+  text-decoration: none !important;
+}
 
 @media(max-width:768px){
   .nav-links { position:absolute; top:60px; left:0; width:100%; background:#111; flex-direction:column; padding:20px; display:none; }
